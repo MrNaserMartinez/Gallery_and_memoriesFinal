@@ -36,6 +36,19 @@
                 app:cornerRadius="8dp"/>
 
             <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✏️ Editar"
+                android:textColor="#5D4037"
+                android:backgroundTint="#DEC5A7"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="2dp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"/>
+
+            <Button
                 android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,14 +70,49 @@
         app:cardElevation="4dp"
         android:layout_marginBottom="16dp">
 
-        <ImageView
-            android:id="@+id/fullImageView"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitCenter"
-            android:contentDescription="Foto completa"
-            android:background="#F5E6D3"
-            android:padding="8dp"/>
+            android:background="#F5E6D3">
+
+            <ImageView
+                android:id="@+id/fullImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:contentDescription="Foto completa"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/editPhotoOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:background="#80000000"
+                android:padding="16dp">
+
+                <Button
+                    android:id="@+id/btnTakeNewPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📸 Tomar Nueva Foto"
+                    android:textColor="#5D4037"
+                    android:backgroundTint="#E6D5C3"
+                    android:layout_marginBottom="8dp"
+                    app:cornerRadius="8dp"/>
+
+                <Button
+                    android:id="@+id/btnChoosePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🖼️ Elegir de Galería"
+                    android:textColor="#5D4037"
+                    android:backgroundTint="#E6D5C3"
+                    app:cornerRadius="8dp"/>
+            </LinearLayout>
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -81,13 +129,15 @@
             android:padding="16dp"
             android:background="#FFF5EB">
 
-            <TextView
+            <EditText
                 android:id="@+id/detailDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#5D4037"
+                android:background="@null"
+                android:enabled="false"
                 android:drawableStart="@android:drawable/ic_menu_info_details"
                 android:drawablePadding="8dp"/>
 
@@ -124,5 +174,4 @@
                 android:drawablePadding="8dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </LinearLayout>

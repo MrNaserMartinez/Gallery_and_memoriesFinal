@@ -9,6 +9,8 @@ activity = "1.9.3"
 constraintlayout = "2.1.4"
 playServicesLocation = "21.3.0"
 playServicesMaps = "19.0.0"
+core = "1.10.0"
+coreKtx = "1.15.0-rc01"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }

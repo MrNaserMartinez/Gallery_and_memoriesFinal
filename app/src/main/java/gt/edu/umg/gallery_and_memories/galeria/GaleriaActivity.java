@@ -127,8 +127,8 @@ public class GaleriaActivity extends AppCompatActivity {
     }
 
     private void setupButtonListeners() {
-            btnRegresar.setOnClickListener(v -> {
-                finish();
+        btnRegresar.setOnClickListener(v -> {
+            finish();
         });
     }
 
